@@ -6,11 +6,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: #fff;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
     position: relative;
 }
@@ -73,6 +71,10 @@ nav a:hover {
     padding: 2em 0;
 }
 
+.section h2 {
+    color: #ffcc00;
+}
+
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -108,12 +110,23 @@ b {
     animation: reveal 2s forwards var(--delay);
     font-size: 20px;
 }
+.para1 span {
+    display: block;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 2s;
+}
+
+.para1 span.animate {
+    opacity: 1;
+}
 
 @keyframes reveal {
     from {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -147,26 +160,6 @@ b {
     width: 80%;
     object-fit: cover;
 }
-
-footer {
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1em 0;
-    text-align: center;
-    color: #fff;
-}
-
 
 a:link {
     color: white;
@@ -238,6 +231,15 @@ tr:hover {
         width: 90%;
     }
 }
+.webture {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.webture img {
+    max-width: 100%;
+    height: auto;
+}
 
 .social-links {
     list-style: none;
@@ -272,3 +274,24 @@ tr:hover {
         margin: 0.5em 0;
     }
 }
+
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 0;
+    text-align: center;
+    color: #fff;
+    margin-top: auto;
+    }
