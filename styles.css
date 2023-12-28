@@ -73,8 +73,11 @@ nav a:hover {
 
 .section h2 {
     color: #ffcc00;
+    
 }
-
+.home-content h2{
+    color: #fff;
+}
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -108,13 +111,13 @@ b {
     display: block;
     opacity: 0;
     animation: reveal 2s forwards var(--delay);
-    font-size: 20px;
+    font-size: 25px;
 }
 .para1 span {
     display: block;
     opacity: 0;
-    font-size: 20px;
-    transition: opacity 2s;
+    font-size: 25px;
+    transition: opacity 3s;
 }
 
 .para1 span.animate {
@@ -133,6 +136,36 @@ b {
     }
 }
 
+.decode .para2 span {
+    display: block;
+    opacity: 0;
+    font-size: 25px;
+    transition: opacity 3s;
+}
+
+.decode .para2 span.animate {
+    opacity: 1;
+}
+.iot .para3 span {
+    display: block;
+    opacity: 0;
+    font-size: 25px;
+    transition: opacity 3s;
+}
+
+.iot .para3 span.animate {
+    opacity: 1;
+}
+.para4 span {
+    display: block;
+    opacity: 0;
+    font-size: 25px;
+    transition: opacity 3s;
+}
+
+.abet .para4 span.animate {
+    opacity: 1;
+}
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -231,14 +264,40 @@ tr:hover {
         width: 90%;
     }
 }
-.webture {
+.webture,
+.decode {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px; 
 }
 
-.webture img {
+.webture img,
+.decode img,
+.iot img {
     max-width: 100%;
     height: auto;
+    border-radius: 20px;
+}
+.iot {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.iot img {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.iot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.iot img:nth-child(2) {
+    max-height: 800px; /* Adjust the height as needed */
 }
 
 .social-links {
@@ -275,7 +334,6 @@ tr:hover {
     }
 }
 
-
 footer {
     color: #fff;
     text-align: center;
@@ -294,4 +352,4 @@ footer {
     text-align: center;
     color: #fff;
     margin-top: auto;
-    }
+}
