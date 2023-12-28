@@ -32,20 +32,21 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .home-content {
-    /* max-width: 1000px; */
     margin: 0 auto;
     text-align: center;
     font-size: 50px;
     line-height: 1.8;
 }
+
 h1 {
     margin: 0;
 }
-.auto-type{
+
+.auto-type {
     color: #ffcc00;
 }
-
 
 nav ul {
     list-style: none;
@@ -77,7 +78,7 @@ nav a:hover {
     line-height: 1.8;
 }
 
-.about-content, 
+.about-content,
 .projects-content,
 .contact-content {
     max-width: 800px;
@@ -85,15 +86,25 @@ nav a:hover {
     font-size: larger;
     line-height: 1.8;
 }
-.para span{
-    display: block; opacity: 0;
-    animation: reveal .2s forwards var(--delay);
+
+.para span {
+    display: block;
+    opacity: 0;
+    animation: reveal 1s forwards var(--delay);
+    font-size: 20px;
 }
+
 @keyframes reveal {
-    from {translate: 0 20px;}
-    to { translate: none; opacity: 1;}
-    
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 footer {
     color: #fff;
     text-align: center;
@@ -102,25 +113,27 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 a:link {
     color: white;
     text-decoration: none;
-  }
-  
-  a:visited {
+}
+
+a:visited {
     color: white;
     text-decoration: none;
-  }
-  
-    a:hover {
+}
+
+a:hover {
     color: #ffcc00;
     text-decoration: none;
-  }
-  
-    a:active {
+}
+
+a:active {
     color: black;
     text-decoration: none;
-  }
+}
+
 .social-links {
     list-style: none;
     padding: 0;
