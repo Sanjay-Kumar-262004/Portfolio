@@ -73,11 +73,8 @@ nav a:hover {
 
 .section h2 {
     color: #ffcc00;
-    
 }
-.home-content h2{
-    color: #fff;
-}
+
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -102,7 +99,29 @@ nav a:hover {
     font-size: larger;
     line-height: 1.8;
 }
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
+    .image {
+        flex: 0;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
 b {
     color: #ffcc00;
 }
@@ -111,12 +130,12 @@ b {
     display: block;
     opacity: 0;
     animation: reveal 2s forwards var(--delay);
-    font-size: 25px;
+    font-size: 20px;
 }
 .para1 span {
     display: block;
     opacity: 0;
-    font-size: 25px;
+    font-size: 20px;
     transition: opacity 3s;
 }
 
@@ -139,33 +158,14 @@ b {
 .decode .para2 span {
     display: block;
     opacity: 0;
-    font-size: 25px;
+    font-size: 20px;
     transition: opacity 3s;
 }
 
 .decode .para2 span.animate {
     opacity: 1;
 }
-.iot .para3 span {
-    display: block;
-    opacity: 0;
-    font-size: 25px;
-    transition: opacity 3s;
-}
 
-.iot .para3 span.animate {
-    opacity: 1;
-}
-.para4 span {
-    display: block;
-    opacity: 0;
-    font-size: 25px;
-    transition: opacity 3s;
-}
-
-.para4 span.animate {
-    opacity: 1;
-}
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -191,8 +191,10 @@ b {
 .image img {
     height: 100%;
     width: 80%;
-    object-fit: cover;
+    object-fit: cover; 
+    border-radius: 30px;
 }
+
 
 a:link {
     color: white;
@@ -281,6 +283,19 @@ tr:hover {
     text-align: center;
     margin-top: 20px;
 }
+.ecobin img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; 
+}
+
+.ecobin img:nth-child(2) {
+    max-width: 70%; 
+    margin-top: 10px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .image-container {
     display: flex;
@@ -288,7 +303,7 @@ tr:hover {
     margin-bottom: 20px;
 }
 .iot img {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px; 
 }
 .iot img {
     max-width: 100%;
@@ -297,9 +312,49 @@ tr:hover {
 }
 
 .iot img:nth-child(2) {
-    max-height: 800px; /* Adjust the height as needed */
+    max-height: 800px; 
+}
+.iot .para3 span {
+    display: block;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 3s;
+}
+.iot .para3 span,
+.para4 span,
+.decode .para5 span {
+    display: block;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 3s;
 }
 
+.iot .para3 span.animate,
+.para4 span.animate,
+.decode .para5 span.animate {
+    opacity: 1;
+}
+.iot .para3 span.animate {
+    opacity: 1;
+}
+.para4 span {
+    display: block;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 3s;
+}
+
+.para4 span.animate {
+    opacity: 1;
+}
+
+.section h2 {
+    color: #ffcc00;
+    
+}
+.home-content h2{
+    color: #fff;
+}
 .social-links {
     list-style: none;
     padding: 0;
@@ -331,6 +386,20 @@ tr:hover {
 
     nav a {
         margin: 0.5em 0;
+    }
+
+    .modern-table caption {
+        font-size: 1em; 
+    }
+
+    .modern-table thead th,
+    .modern-table tbody td {
+        padding: 10px; 
+        font-size: 0.9em; 
+    }
+
+    .table-container {
+        padding: 10px; 
     }
 }
 
