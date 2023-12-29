@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var typed = new Typed(".auto-type", {
         strings: ["Code", "Build Websites", "Read Books", "Follow Tech", "Learn Electronics", "Manage the class"],
         typeSpeed: 100,
-        backSpeed: 100,
+        backSpeed: 50,
         loop: true
     });
 });
