@@ -5,15 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
         backSpeed: 50,
         loop: true
     });
+    var cursorElement = document.createElement("span");
+            cursorElement.className = "typed-cursor";
+            document.querySelector(".typed-quote").appendChild(cursorElement);
 });
+
 document.addEventListener("DOMContentLoaded", function () {
-    var typed = new Typed("#typed-quote", {
+    var typed = new Typed(".typed-quote", {
         strings: ['"Education is the most powerful weapon you can use to change the world - Nelson Mandela"'],
         typeSpeed: 50,
         backSpeed: 25,
         loop: true
     });
+    var cursorElement = document.createElement("span");
+            cursorElement.className = "typed-cursor";
+            document.querySelector(".typed-quote").appendChild(cursorElement);
 });
+
+        
 // document.addEventListener("DOMContentLoaded", function () {
 //     var para1 = document.querySelector('.para1 span');
 //     var para2 = document.querySelector('.decode .para2 span');

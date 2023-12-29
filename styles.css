@@ -11,8 +11,9 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
-
 header {
     padding: 2em;
     text-align: center;
@@ -69,6 +70,7 @@ nav a:hover {
 
 .section {
     padding: 2em 0;
+    flex: 1;
 }
 
 .section h2 {
@@ -388,6 +390,50 @@ tr:hover {
     border-radius: 20px;
 }
 
+.codeclause {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.codeclause img {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px; /* Add margin between images */
+}
+.bharat img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.iv img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.iv .image-container {
+    max-width: 70%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iv img:nth-child(2) {
+    max-width: 70%; 
+    margin-top: 10px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iv .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 .para1 span,
 .para2 span,
 .para3 span,
@@ -395,15 +441,15 @@ tr:hover {
 .para5 span,
 .para6 span {
     display: block;
-    opacity: 1; /* Set opacity to 1 */
+    opacity: 1; 
     font-size: 20px;
 }
 
-/* .decode .para2 span.animate,
+.decode .para2 span.animate,
 .ecobin .para4 span.animate {
     opacity: 1;
     animation: reveal 2s forwards var(--delay);
-} */
+}
 
 @keyframes reveal {
     from {
@@ -419,13 +465,18 @@ tr:hover {
 
 .iot .para3 span,
 .para4 span,
-.decode .para5 span {
+.abet .para5 span {
     display: block;
     opacity: 0;
     font-size: 20px;
     transition: opacity 3s;
 }
+.decode .para2 span {
+    display: block;
+    opacity: 1; 
+    font-size: 20px;
 
+}
 .iot .para3 span.animate,
 .para4 span.animate,
 .decode .para5 span.animate {
@@ -434,13 +485,12 @@ tr:hover {
 .iot .para3 span.animate {
     opacity: 1;
 }
-.para4 span {
+.para4 span  {
     display: block;
-    opacity: 0;
+    opacity: 1;
     font-size: 20px;
     transition: opacity 3s;
 }
-
 
 .para4 span.animate {
     opacity: 1;
@@ -510,12 +560,12 @@ tr:hover {
         padding: 10px; 
     }
 }
-#quote {
+.quote {
     text-align: center;
     padding: 20px;
 }
 
-#typed-quote {
+.typed-quote {
     font-size: 50px; /* Adjust the font size as needed */
     margin: 0;
 }
@@ -531,6 +581,27 @@ tr:hover {
     font-size: larger;
     line-height: 1.8;
 }
+* Back to Top Button Styles */
+.back-to-top-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-top-btn {
+    display: none;
+    background-color: #007bff; /* Choose your preferred background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-to-top-btn:hover {
+    background-color: #0056b3; /* Choose your preferred hover color */
+}
+
 
 footer {
     color: #fff;
@@ -550,4 +621,16 @@ footer {
     text-align: center;
     color: #fff;
     margin-top: auto;
+    flex-shrink: 0; /* Do not shrink the footer */
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Ensure the footer is above other content */
+    }
 }
