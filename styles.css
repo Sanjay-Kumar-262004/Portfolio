@@ -13,7 +13,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 header {
     padding: 2em;
@@ -72,7 +71,6 @@ nav a:hover {
 .section {
     padding: 2em 0;
     flex: 1;
-    margin-bottom: 50px;
 }
 
 .section h2 {
@@ -583,6 +581,26 @@ tr:hover {
     font-size: larger;
     line-height: 1.8;
 }
+.back-to-top-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-top-btn {
+    display: none;
+    background-color: #007bff; /* Choose your preferred background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-to-top-btn:hover {
+    background-color: #0056b3; /* Choose your preferred hover color */
+}
+
 
 footer {
     color: #fff;
@@ -592,29 +610,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    display: none;
-    z-index: 1000;
-}
-
-.back-to-top-link {
-    text-decoration: none;
-    color: #fff;
-}
 
 .footer-container {
-    margin-top: 50px; /* Add space between "Back to Top" and footer */
-    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 0;
     text-align: center;
-    padding: 20px 0;
+    color: #fff;
+    margin-top: auto;
+    flex-shrink: 0; /* Do not shrink the footer */
 }
 
 /* Media Query for small screens */
