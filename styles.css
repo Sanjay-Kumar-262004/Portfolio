@@ -622,7 +622,7 @@ footer {
     margin-top: auto;
     flex-shrink: 0; /* Do not shrink the footer */
 }
-/*  */
+
 /* Media Query for small screens */
 @media screen and (max-width: 600px) {
     .footer-container {
