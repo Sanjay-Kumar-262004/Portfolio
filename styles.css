@@ -620,7 +620,7 @@ footer {
     text-align: center;
     color: #fff;
     margin-top: auto;
-    flex-shrink: 0; /* Do not shrink the footer */
+    /* flex-shrink: 0; Do not shrink the footer */
 }
 
 /* Media Query for small screens */
