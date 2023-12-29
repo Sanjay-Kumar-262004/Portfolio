@@ -274,7 +274,7 @@ tr:hover {
 
 .webture img,
 .decode img,
-.iot img {
+.iot img  {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
@@ -296,6 +296,24 @@ tr:hover {
     margin-left: auto;
     margin-right: auto;
 }
+.abet img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.abet img:nth-child(2) {
+    max-width: 70%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.conclave img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
 .image-container {
     display: flex;
@@ -314,12 +332,91 @@ tr:hover {
 .iot img:nth-child(2) {
     max-height: 800px; 
 }
-.iot .para3 span {
-    display: block;
-    opacity: 0;
-    font-size: 20px;
-    transition: opacity 3s;
+.sensors img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
+
+.sensors .image-container {
+    max-width: 70%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sensors img:nth-child(2) {
+    max-width: 70%; 
+    margin-top: 10px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sensors .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.award img:first-child {
+    max-width: 60%; 
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.award img:nth-child(2) {
+    max-width: 70%;
+    margin-top: 10px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.award .image-container {
+    max-width: 70%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.award .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.para1 span,
+.para2 span,
+.para3 span,
+.para4 span,
+.para5 span,
+.para6 span {
+    display: block;
+    opacity: 1; /* Set opacity to 1 */
+    font-size: 20px;
+}
+
+/* .decode .para2 span.animate,
+.ecobin .para4 span.animate {
+    opacity: 1;
+    animation: reveal 2s forwards var(--delay);
+} */
+
+@keyframes reveal {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .iot .para3 span,
 .para4 span,
 .decode .para5 span {
@@ -344,7 +441,18 @@ tr:hover {
     transition: opacity 3s;
 }
 
+
 .para4 span.animate {
+    opacity: 1;
+}
+.abet .para5 span {
+    display: block;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 3s;
+}
+
+.abet .para5 span.animate {
     opacity: 1;
 }
 
@@ -401,6 +509,27 @@ tr:hover {
     .table-container {
         padding: 10px; 
     }
+}
+#quote {
+    text-align: center;
+    padding: 20px;
+}
+
+#typed-quote {
+    font-size: 50px; /* Adjust the font size as needed */
+    margin: 0;
+}
+.quote-section {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 100px auto; /* Add margin at the top */
+    font-size: larger;
+    line-height: 1.8;
 }
 
 footer {
