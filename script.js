@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         strings: ['"Education is the most powerful weapon you can use to change the world - Nelson Mandela"'],
         typeSpeed: 50,
         backSpeed: 25,
-        loop: true
+        loop: false
     });
     var cursorElement = document.createElement("span");
             cursorElement.className = "typed-cursor";
