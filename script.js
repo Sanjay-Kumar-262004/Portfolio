@@ -22,10 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".typed-quote").appendChild(cursorElement);
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all paragraphs with class 'para1', 'para2', etc.
     const paragraphs = document.querySelectorAll('.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11');
-
-    // Intersection Observer options
     const options = {
         root: null,
         rootMargin: '0px',
@@ -52,35 +49,33 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(paragraph);
     });
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//     const backToTopBtn = document.querySelector('.back-to-top-btn');
-//     let isScrollingUp = false;
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 
-//     function handleScroll() {
-//         const scrollY = window.scrollY;
+// Show or hide the scroll-to-top button based on the scroll position
+function handleScrollForButton() {
+    const scrollTopButton = document.querySelector('.scroll-top-btn');
+    const scrollY = window.scrollY;
 
-//         if (scrollY > 300 && !isScrollingUp) {
-//             backToTopBtn.classList.add('visible'); // Add 'visible' class
-//         } else {
-//             backToTopBtn.classList.remove('visible'); // Remove 'visible' class
-//         }
-//     }
+    if (scrollY > 500) {
+        scrollTopButton.classList.add('visible');
+    } else {
+        scrollTopButton.classList.remove('visible');
+    }
+}
 
-//     window.addEventListener('scroll', function () {
-//         handleScroll();
-//     });
+// Event listener for scrolling
+window.addEventListener('scroll', function () {
+    handleScrollForButton();
+});
 
-//     window.addEventListener('wheel', function (e) {
-//         isScrollingUp = e.deltaY < 0;
-//     });
-
-//     function scrollToTop() {
-//         window.scrollTo({
-//             top: 0,
-//             behavior: 'smooth'
-//         });
-//     }
-
-//     backToTopBtn.addEventListener('click', scrollToTop);
-// });
+// Event listener for clicking the scroll-to-top button
+document.querySelector('.scroll-top-btn').addEventListener('click', function () {
+    scrollToTop();
+});
 

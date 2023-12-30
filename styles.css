@@ -591,39 +591,6 @@ tr:hover {
     font-size: larger;
     line-height: 1.8;
 }
-.back-to-top-container {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px; /* Add margin at the bottom */
-}
-
-.back-to-top-btn {
-    display: none;
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1001;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, visibility 1s linear 1s; /* Add transition effect and delay visibility */
-}
-
-.back-to-top-btn:hover {
-    background-color: transparent;
-}
-
-.back-to-top-btn.visible {
-    opacity: 1;
-    visibility: visible; /* Make the button visible */
-    transition: opacity 0.3s ease-in-out;
-}
 
 /* Media Query for small screens */
 @media screen and (max-width: 600px) {
@@ -634,11 +601,6 @@ tr:hover {
         right: 0;
         z-index: 1000;
     }
-}
-.back-to-top-btn.visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .para1 span {
@@ -679,5 +641,35 @@ footer {
         left: 0;
         right: 0;
         z-index: 1000; /* Ensure the footer is above other content */
+    }
+}
+/* Scroll to top button styling */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .scroll-top-btn {
+        bottom: 10px;
+        right: 10px;
     }
 }
