@@ -21,49 +21,66 @@ document.addEventListener("DOMContentLoaded", function () {
             cursorElement.className = "typed-cursor";
             document.querySelector(".typed-quote").appendChild(cursorElement);
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all paragraphs with class 'para1', 'para2', etc.
+    const paragraphs = document.querySelectorAll('.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11');
 
-        
+    // Intersection Observer options
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5, // Adjust as needed
+    };
+
+    // Callback function to be executed when the paragraphs are in view
+    const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add 'animate' class to the paragraph in view
+                entry.target.classList.add('animate');
+                // Unobserve the paragraph to avoid unnecessary callbacks
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Create an Intersection Observer with the callback and options
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    // Observe each paragraph
+    paragraphs.forEach(paragraph => {
+        observer.observe(paragraph);
+    });
+});
 // document.addEventListener("DOMContentLoaded", function () {
-//     var para1 = document.querySelector('.para1 span');
-//     var para2 = document.querySelector('.decode .para2 span');
-//     var para3 = document.querySelector('.ecobin .para3 span');
-//     var para4 = document.querySelector('.iot .para4 span');
-//     var para5 = document.querySelector('.abet .para5 span');
-
-//     function getElementOffsetTop(element) {
-//         var offsetTop = 0;
-//         while (element) {
-//             offsetTop += element.offsetTop;
-//             element = element.offsetParent;
-//         }
-//         return offsetTop;
-//     }
+//     const backToTopBtn = document.querySelector('.back-to-top-btn');
+//     let isScrollingUp = false;
 
 //     function handleScroll() {
-//         var para1OffsetTop = getElementOffsetTop(para1);
-//         var para2OffsetTop = getElementOffsetTop(para2);
-//         var para3OffsetTop = getElementOffsetTop(para3);
-//         var para4OffsetTop = getElementOffsetTop(para4);
-//         var para5OffsetTop = getElementOffsetTop(para5);
+//         const scrollY = window.scrollY;
 
-//         var scrollPosition = window.scrollY;
-
-//         function addRemoveClass(element, offsetTop) {
-//             if (scrollPosition > offsetTop - window.innerHeight && scrollPosition < offsetTop + element.offsetHeight) {
-//                 element.classList.add('animate');
-//             } else {
-//                 element.classList.remove('animate');
-//             }
+//         if (scrollY > 300 && !isScrollingUp) {
+//             backToTopBtn.classList.add('visible'); // Add 'visible' class
+//         } else {
+//             backToTopBtn.classList.remove('visible'); // Remove 'visible' class
 //         }
-
-//         addRemoveClass(para1, para1OffsetTop);
-//         addRemoveClass(para2, para2OffsetTop);
-//         addRemoveClass(para3, para3OffsetTop);
-//         addRemoveClass(para4, para4OffsetTop);
-//         addRemoveClass(para5, para5OffsetTop);
 //     }
 
-//     window.addEventListener('scroll', handleScroll);
-//     handleScroll();
+//     window.addEventListener('scroll', function () {
+//         handleScroll();
+//     });
+
+//     window.addEventListener('wheel', function (e) {
+//         isScrollingUp = e.deltaY < 0;
+//     });
+
+//     function scrollToTop() {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     }
+
+//     backToTopBtn.addEventListener('click', scrollToTop);
 // });
 

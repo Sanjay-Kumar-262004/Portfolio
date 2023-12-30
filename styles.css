@@ -258,7 +258,7 @@ td {
 }
 
 tr:hover {
-    background-color: ;
+    /* background-color: ; */
     transform: scale(1.02);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
@@ -574,6 +574,16 @@ tr:hover {
     padding: 20px;
     margin-bottom: 20px; /* Add margin at the bottom */
 }
+.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.para1.animate, .para2.animate, .para3.animate, .para4.animate, .para5.animate, .para6.animate, .para7.animate, .para8.animate, .para9.animate, .para10.animate, .para11.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .contact-content {
     max-width: 800px;
@@ -584,21 +594,59 @@ tr:hover {
 .back-to-top-container {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 40px; /* Add margin at the bottom */
 }
 
 .back-to-top-btn {
     display: none;
-    background-color: #007bff; /* Choose your preferred background color */
+    background-color: transparent;
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 1s linear 1s; /* Add transition effect and delay visibility */
 }
 
 .back-to-top-btn:hover {
-    background-color: #0056b3; /* Choose your preferred hover color */
+    background-color: transparent;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible; /* Make the button visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+}
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.para1 span {
+    --delay: 0s;
+    display: block;
+    opacity: 0;
+    animation: reveal 2s forwards var(--delay);
+    font-size: 20px;
 }
 
 
