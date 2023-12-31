@@ -536,7 +536,19 @@ tr:hover {
 .social-links a:hover {
     background-color: #ffcc00;
 }
-
+.social-links .linkedin a:hover{
+    background-color: #0077b5;
+    color: #e6d7ff;
+}
+.social-links .github a:hover{
+    background-color: black;
+    color: #e6d7ff;
+}
+.social-links li a[href^="mailto"]:hover {
+    background: linear-gradient(to right, #3e65cf,#c71610, #f2a60c, #08851b);
+    color: #fff; /* Change text color to white or your preference */
+    transition: background 0.3s, color 0.3s;
+}
 @media screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
