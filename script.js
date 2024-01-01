@@ -98,10 +98,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-// Activate CounterUp with Waypoints
-$(document).ready(function () {
-    $('#profile-visits-counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
-});
