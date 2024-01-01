@@ -78,17 +78,23 @@ window.addEventListener('scroll', function () {
 document.querySelector('.scroll-top-btn').addEventListener('click', function () {
     scrollToTop();
 });
+// Function to scroll to the target section smoothly
+function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+// Attach click event listeners to the dropdown content links
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
 
-//     dropdownTriggers.forEach(function (trigger) {
-//         trigger.addEventListener("click", function (event) {
-//             event.preventDefault();
-//             const dropdownContent = this.nextElementSibling;
-
-//             // Toggle visibility of the dropdown content
-//             dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-//         });
-//     });
-// });
+    dropdownLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const sectionId = this.getAttribute('href').substring(1); // Get the target section ID
+            scrollToSection(sectionId);
+        });
+    });
+});
