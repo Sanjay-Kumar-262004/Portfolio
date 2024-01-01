@@ -57,25 +57,26 @@ function scrollToTop() {
     });
 }
 
-// Show or hide the scroll-to-top button based on the scroll position
-function handleScrollForButton() {
-    const scrollTopButton = document.querySelector('.scroll-top-btn');
-    const scrollY = window.scrollY;
+// // Show or hide the scroll-to-top button based on the scroll position
+// function handleScrollForButton() {
+//     const scrollTopButton = document.querySelector('.scroll-top-btn');
+//     const scrollY = window.scrollY;
 
-    if (scrollY > 500) {
-        scrollTopButton.classList.add('visible');
-    } else {
-        scrollTopButton.classList.remove('visible');
-    }
-}
+//     if (scrollY > 500) {
+//         scrollTopButton.classList.add('visible');
+//     } else {
+//         scrollTopButton.classList.remove('visible');
+//     }
+// }
 
-// Event listener for scrolling
-window.addEventListener('scroll', function () {
-    handleScrollForButton();
-});
+// // Event listener for scrolling
+// window.addEventListener('scroll', function () {
+//     handleScrollForButton();
+// });
 
-// Event listener for clicking the scroll-to-top button
-document.querySelector('.scroll-top-btn').addEventListener('click', function () {
-    scrollToTop();
-});
+// // Event listener for clicking the scroll-to-top button
+// document.querySelector('.scroll-top-btn').addEventListener('click', function () {
+//     scrollToTop();
+// });
+
 
