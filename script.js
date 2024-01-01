@@ -69,7 +69,7 @@ function handleScrollForButton() {
     }
 }
 
-// Event listener for scrolling//
+// Event listener for scrolling
 window.addEventListener('scroll', function () {
     handleScrollForButton();
 });
@@ -79,4 +79,16 @@ document.querySelector('.scroll-top-btn').addEventListener('click', function () 
     scrollToTop();
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
 
+//     dropdownTriggers.forEach(function (trigger) {
+//         trigger.addEventListener("click", function (event) {
+//             event.preventDefault();
+//             const dropdownContent = this.nextElementSibling;
+
+//             // Toggle visibility of the dropdown content
+//             dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+//         });
+//     });
+// });
