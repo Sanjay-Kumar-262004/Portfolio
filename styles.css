@@ -298,6 +298,10 @@ tr:hover {
     margin-left: auto;
     margin-right: auto;
 }
+.ecobin a{
+    color: #ffcc00;
+    font-weight: 700;
+}
 .abet img {
     max-width: 100%;
     height: auto;
