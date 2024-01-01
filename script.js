@@ -69,7 +69,7 @@ function handleScrollForButton() {
     }
 }
 
-// Event listener for scrolling
+// Event listener for scrolling//
 window.addEventListener('scroll', function () {
     handleScrollForButton();
 });
