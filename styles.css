@@ -805,4 +805,13 @@ nav a:hover {
 }
 /* Add more nth-child rules for additional items */
 
+.profile-visits-content {
+    text-align:left;
+    margin: 0 auto;
+}
 
+.profile-visits-counter {
+    font-size: 24px;
+    color: #ffcc00; /* Choose your desired color */
+    margin-top: 10px;
+}
