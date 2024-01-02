@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var typed = new Typed(".typed-quote", {
-        strings: ['"Education is the most powerful weapon you can use to change the world - Nelson Mandela"'],
+        strings: ['“There will always be hurdles in life, but if you want to achieve a goal, you must continue.” - Malala Yousafzai."'],
         typeSpeed: 50,
         backSpeed: 25,
         loop: false
