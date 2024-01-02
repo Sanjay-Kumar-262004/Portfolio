@@ -31,6 +31,15 @@ header {
     line-height: 1.8;
 }
 
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+    .home-content {
+        font-size: 30px; /* Adjust the font size for smaller screens */
+        line-height: 1.5; /* Adjust the line height for smaller screens */
+    }
+}
+
+
 h1 {
     margin: 0;
 }
