@@ -599,6 +599,17 @@ tr:hover {
     padding: 20px;
     margin-bottom: 20px; /* Add margin at the bottom */
 }
+/* Add this media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .typed-quote {
+        font-size: 30px; /* Adjust the font size for smaller screens */
+    }
+
+    .quote-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+}
 .para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11 {
     opacity: 0;
     transform: translateY(20px);
