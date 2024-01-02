@@ -826,6 +826,9 @@ nav a:hover {
 .dropdown-content a:nth-child(8) {
     animation-delay: 0.8s;
 }
+.dropdown-content a:nth-child(9) {
+    animation-delay: 0.9s;
+}
 /* Add more nth-child rules for additional items */
 
 /* .profile-visits-content {
