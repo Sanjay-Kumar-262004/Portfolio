@@ -804,7 +804,6 @@ nav a:hover {
 .dropdown-content a:nth-child(1) {
     animation-delay: 0.1s;
 }
-
 .dropdown-content a:nth-child(2) {
     animation-delay: 0.2s;
 }
