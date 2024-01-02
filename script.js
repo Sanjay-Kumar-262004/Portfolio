@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".typed-quote").appendChild(cursorElement);
 });
 document.addEventListener("DOMContentLoaded", function () {
-    const paragraphs = document.querySelectorAll('.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11');
+    const paragraphs = document.querySelectorAll('.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11, .para12');
     const options = {
         root: null,
         rootMargin: '0px',

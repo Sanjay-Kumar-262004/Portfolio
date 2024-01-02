@@ -610,13 +610,13 @@ tr:hover {
         margin-bottom: 10px; /* Adjust margin for smaller screens */
     }
 }
-.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11 {
+.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8, .para9, .para10, .para11, .para12 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 2s ease, transform 2s ease;
 }
 
-.para1.animate, .para2.animate, .para3.animate, .para4.animate, .para5.animate, .para6.animate, .para7.animate, .para8.animate, .para9.animate, .para10.animate, .para11.animate {
+.para1.animate, .para2.animate, .para3.animate, .para4.animate, .para5.animate, .para6.animate, .para7.animate, .para8.animate, .para9.animate, .para10.animate, .para11.animate, .para12.animate {
     opacity: 1;
     transform: translateY(0);
 }
@@ -854,3 +854,37 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#assesment embed {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+/* Add this style for para12 */
+.para12 span {
+    display: block;
+    opacity: 0;
+    animation: reveal 2s forwards var(--delay);
+    font-size: 20px;
+}
+
+.para12 span.animate {
+    opacity: 1;
+}
+
+@keyframes reveal {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
