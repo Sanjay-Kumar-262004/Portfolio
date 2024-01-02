@@ -808,7 +808,7 @@ nav a:hover {
 }
 /* Add more nth-child rules for additional items */
 
-.profile-visits-content {
+/* .profile-visits-content {
     text-align:left;
     margin: 0 auto;
 }
@@ -817,7 +817,7 @@ nav a:hover {
     font-size: 24px;
     color: #ffcc00; /* Choose your desired color */
     margin-top: 10px;
-}
+} */
 #resume .resume {
     max-width: 800px; /* Adjust the maximum width as needed */
     margin: 0 auto;
