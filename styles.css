@@ -818,17 +818,7 @@ nav a:hover {
     color: #ffcc00; /* Choose your desired color 
     margin-top: 10px;
 } */
-#resume {
-    padding: 20px; /* Adjust the padding as needed */
-}
 
-/* Media Query for small screens 
-@media screen and (max-width: 600px) {
-    .resume {
-        width: 100%;
-        max-width: 100%;
-    }
-}*/
 #resume .resume {
     max-width: 800px; /* Adjust the maximum width as needed */
     margin: 0 auto;
