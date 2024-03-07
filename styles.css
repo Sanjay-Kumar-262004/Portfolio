@@ -402,7 +402,13 @@ tr:hover {
     height: auto;
     border-radius: 20px;
 }
-
+.salesforce img {
+    max-width: 70%;
+    margin-top: 10px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
 .codeclause {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -842,7 +848,7 @@ nav a:hover {
 } */
 
 #resume .resume {
-    max-width: 800px; /* Adjust the maximum width as needed */
+    max-width: 650px; /* Adjust the maximum width as needed */
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
@@ -857,15 +863,15 @@ nav a:hover {
 }
 
 #assesment embed {
-    width: 100%;
-    height: 600px; /* Adjust the height as needed */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Adjust the maximum width as needed */
-    margin: 0 auto;
+    max-width: 650px; /* Adjust the maximum width as needed */
+    margin: 0 auto; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    border-radius: 8px;
+    
 }
 /* Add this style for para12 */
 .para12 span {
