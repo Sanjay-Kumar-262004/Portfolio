@@ -23,7 +23,9 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+/* header h1{
+    color: #ffcc00;
+} */
 .home-content {
     margin: 0 auto;
     text-align: center;
@@ -42,6 +44,7 @@ header {
 
 h1 {
     margin: 0;
+    /* color: #ffcc00; */
 }
 
 .auto-type {
@@ -228,7 +231,7 @@ a:active {
 }
 
 .table-container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -249,10 +252,24 @@ a:active {
 
 .modern-table thead th,
 .modern-table tbody td {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border: 1px solid;
 }
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .modern-table thead th,
+    .modern-table tbody td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .modern-table caption {
+        font-size: 1.2em;
+    }
+}
+
 
 tr {
     transition: all 0.2s ease-in;
@@ -335,16 +352,25 @@ tr:hover {
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.iot img {
-    margin-right: 10px; 
-}
+
 .iot img {
     max-width: 100%;
     height: auto;
+    margin-right: 10px; 
     border-radius: 20px;
 }
 
 .iot img:nth-child(2) {
+    max-height: 800px; 
+}
+.ai img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; 
+    border-radius: 20px;
+}
+
+.ai img:nth-child(2) {
     max-height: 800px; 
 }
 .sensors img {
@@ -409,20 +435,24 @@ tr:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;}
-.codeclause {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    margin-top: 20px; /* Add margin for spacing */
-}
 
-.codeclause img {
-    width: 70%; /* Adjust the width as needed */
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 10px; /* Add margin between images */
-}
+    .codeclause {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+    
+    .codeclause img {
+        width: 100%; /* Adjust the width to take 100% of the container */
+        max-width: 300px; /* Set a maximum width for larger screens */
+        height: auto;
+        border-radius: 20px;
+        margin: 10px; /* Add margin around each image */
+    }
+    
+    
 .bharat img {
     max-width: 100%;
     height: auto;
@@ -569,12 +599,12 @@ tr:hover {
     transition: background 0.3s, color 0.3s;
 }
 @media screen and (max-width: 600px) {
-    nav ul {
+     ul {
         flex-direction: column;
     }
 
     nav a {
-        margin: 0.5em 0;
+        navmargin: 0.5em 0;
     }
 
     .modern-table caption {
@@ -731,9 +761,43 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: white;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color:rgb(55, 80, 80); Replace with your desired background color */
+    background-color: #1B4242;
+    padding: 10px;
+    z-index: 1000;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1em;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
 .dropdown-container {
     position: relative;
 }
@@ -743,11 +807,13 @@ nav a:hover {
     position: absolute;
     top: 100%;
     left: 0;
+    background-color:#50727B;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     z-index: 2;
     min-width: 300px;
-    opacity: 0; /* Initial opacity set to 0 */
+    /* opacity: 0; Initial opacity set to 0 */
     transform: translateY(-20px); /* Initial position set above */
     transition: opacity 0.3s, transform 0.3s; /* Add transition effect */
     animation: bounceIn 0.5s;
@@ -862,16 +928,20 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#assesment embed {
-    max-width: 650px; /* Adjust the maximum width as needed */
-    margin: 0 auto; 
+#assesment_embed {
+    width: 60%; /* Adjust as needed for responsiveness */
+    max-width: 650px;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    width: 100%;
-    height: 600px; /* Adjust the height as needed */
-    border-radius: 8px;
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #assesment_embed {
+        width: 60%;
+    }
 }
 /* Add this style for para12 */
 .para12 span {
